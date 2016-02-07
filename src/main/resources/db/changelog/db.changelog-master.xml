@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet dbms="h2" author="bhavesh.shah" id="1">
+        <createTable tableName="USER">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="FIRST_NAME" type="varchar(100)">
+                <constraints nullable="true"></constraints>
+            </column>
+            <column name="LAST_NAME" type="varchar(60)">
+                <constraints nullable="true"></constraints>
+            </column>
+            <column name="USERNAME" type="varchar(60)">
+                <constraints nullable="false"></constraints>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet dbms="h2" id="2" author="bhavesh.shah">
+        <insert tableName="USER">
+            <column name="FIRST_NAME" value="Bhavesh"/>
+            <column name="LAST_NAME" value="Shah"/>
+            <column name="USERNAME" value="bhavesh.shah"/>
+        </insert>
+    </changeSet>
+    <!--<changeSet dbms="h2" id="3" author="bhavesh.shah">
+        <addColumn tableName="USER">
+            <column name="EMAIL" type="email">
+                <constraints nullable="true"></constraints>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet dbms="h2" id="4" author="bhavesh.shah">
+        <update tableName="USER">
+            <column name="EMAIL" value="dakbhavesh@gmail.com"></column>
+            <where>
+                id=1
+            </where>
+        </update>
+    </changeSet>-->
+</databaseChangeLog>

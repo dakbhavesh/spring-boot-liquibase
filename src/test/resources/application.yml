@@ -1,0 +1,28 @@
+logging:
+  file: logs/spring-boot-partone.log
+
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+      write_dates_as_timestamps: false
+  profiles:
+    active: dev
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+app:
+    timezone: UTC
+
+server:
+    address: localhost
+    port: 9595
+    context-path:
+
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.xml

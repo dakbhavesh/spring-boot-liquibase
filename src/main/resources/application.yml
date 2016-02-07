@@ -1,0 +1,32 @@
+logging:
+  file: logs/spring-boot-partone.log
+
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+      write_dates_as_timestamps: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+endpoints:
+  health:
+    sensitive: false
+
+server:
+  address: localhost
+  port: 8585
+  context-path:
+
+metrics:
+  jmx.enabled: true
+
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.xml
