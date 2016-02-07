@@ -23,9 +23,10 @@
             <column name="USERNAME" value="bhavesh.shah"/>
         </insert>
     </changeSet>
-    <!--<changeSet dbms="h2" id="3" author="bhavesh.shah">
+    <!-- database changed for application version 2
+    <changeSet dbms="h2" id="3" author="bhavesh.shah">
         <addColumn tableName="USER">
-            <column name="EMAIL" type="email">
+            <column name="EMAIL" type="varchar(100)">
                 <constraints nullable="true"></constraints>
             </column>
         </addColumn>
@@ -37,5 +38,6 @@
                 id=1
             </where>
         </update>
-    </changeSet>-->
+    </changeSet>
+    -->
 </databaseChangeLog>

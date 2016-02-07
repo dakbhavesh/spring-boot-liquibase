@@ -2,6 +2,7 @@
 
 Once you have liquibase and database dependency in place, Spring Boot will autoconfigure it and override defaults if any configuration is provided.
 
+This application has db console available on [url] (http://localhost:8585/h2-console)
 **What is liquibase?**
 
 Liquibase is an open source database independent library for tracking, managing and applying database schema changes.

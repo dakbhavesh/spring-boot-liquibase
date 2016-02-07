@@ -32,15 +32,15 @@ public class UserServiceIntegrationTests {
     public void testGetAllUsers(){
         List<User> users = (List)userService.getAll();
         Assert.assertNotNull(users);
-        Assert.assertEquals(2, users.size());
+        Assert.assertEquals(1, users.size());
         Assert.assertEquals("Bhavesh", users.get(0).getFirstName());
     }
 
     private User prepareUser(){
         User user = new User();
-        user.setFirstName("Foo");
-        user.setLastName("Bar");
-        user.setUsername("foo.bar");
+        user.setFirstName("Bhavesh");
+        user.setLastName("Shah");
+        user.setUsername("bhavesh.shah");
         return user;
     }
 }
