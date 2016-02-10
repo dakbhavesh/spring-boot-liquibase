@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * The Application.
  */
 @SpringBootApplication
-@RestController
 public class App {
-
 	/**
 	 * The entry point of application.
 	 *
