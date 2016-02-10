@@ -3,7 +3,9 @@ package com.meetup.web.resource;
 import com.meetup.domain.User;
 import com.meetup.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,12 +22,16 @@ public class UserResource {
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public User findOne(@PathVariable("id") Long id){
-        return userService.findOne(id);
+    public ResponseEntity<User> findOne(@PathVariable("id") Long id){
+        User user = userService.findOne(id);
+        if(user == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public User save(@RequestBody User user){
-        return userService.save(user);
+    public ResponseEntity<User> save(@RequestBody User user){
+        return new ResponseEntity<>(userService.save(user), HttpStatus.OK);
     }
 }
