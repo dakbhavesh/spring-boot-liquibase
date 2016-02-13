@@ -32,7 +32,7 @@ public class UserServiceIntegrationTests {
     public void testGetAllUsers(){
         List<User> users = (List)userService.getAll();
         Assert.assertNotNull(users);
-        Assert.assertEquals(1, users.size());
+        Assert.assertEquals(2, users.size());
         Assert.assertEquals("Bhavesh", users.get(0).getFirstName());
     }
 

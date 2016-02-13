@@ -2,6 +2,7 @@ package com.meetup;
 
 import com.meetup.web.resource.UserResource;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class UserResourceIntegrationTests {
     }
 
     @Test
+    @Ignore
     public void testSaveUser() throws Exception {
         String userJson = "{\n" +
                 "\"firstName\": \"Dhaval\",\n" +
