@@ -9,12 +9,13 @@ import java.time.ZonedDateTime;
  * Created by bhavesh.shah on 4/9/2016.
  */
 
-@Document(indexName = "logs", type = "logs", shards = 1, replicas = 0, refreshInterval = "-1")
+@Document(indexName = "logstash-*", type="logs", shards = 1, replicas = 0, refreshInterval = "-1")
 public class Event {
 
     private String deviceId;
     private ZonedDateTime logTimestamp;
     private String domain;
+
     @Id
     private Long id;
 

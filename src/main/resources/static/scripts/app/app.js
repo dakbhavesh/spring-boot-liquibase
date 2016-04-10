@@ -20,7 +20,7 @@ $(document).ready(function() {
         // subscribe to the /topic/message endpoint
         stompClient.subscribe("/topic/message", function(data) {
             var message = data.body;
-            messageList.append("<li>" + message + "</li>");
+            messageList.append("<p>" + message + "</p>");
         });
     });
 });

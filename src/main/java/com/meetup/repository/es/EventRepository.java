@@ -6,5 +6,5 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 /**
  * Created by bhavesh.shah on 4/10/2016.
  */
-public interface EventRepository  extends ElasticsearchRepository<Event, String>{
+public interface EventRepository  extends ElasticsearchRepository<Event, Long>{
 }

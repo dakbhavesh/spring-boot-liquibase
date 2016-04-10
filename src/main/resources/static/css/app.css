@@ -1,6 +1,7 @@
-.logs {
+.logs-container {
     color: black;
     height:200px;
+    border: black;
 }
 
 ul{

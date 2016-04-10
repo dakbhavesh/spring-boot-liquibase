@@ -16,10 +16,16 @@ spring:
     console:
       enabled: true
       path: /h2-console
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: 192.168.56.101:9200
+      cluster-name: "device-mon"
+      properties: {"http.enabled":"true"}
 endpoints:
   health:
     sensitive: false
-
 
 server:
   address: localhost

@@ -3,6 +3,7 @@ package com.meetup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.SimpleCommandLinePropertySource;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * The Application.
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {SolrAutoConfiguration.class})
 public class App {
 	/**
 	 * The entry point of application.

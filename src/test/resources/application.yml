@@ -18,7 +18,13 @@ spring:
     console:
       enabled: true
       path: /h2-console
-
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: 192.168.56.101:9300
+      cluster-name: "device-mon"
+      properties: {"http.enabled":"false"}
 app:
     timezone: UTC
 
@@ -26,6 +32,7 @@ server:
     address: localhost
     port: 9595
     context-path:
+
 
 liquibase:
   change-log: classpath:/db/changelog/db.changelog-master.xml
