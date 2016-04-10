@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet dbms="h2" author="bhavesh.shah" id="1">
+    <changeSet dbms="h2" author="bhavesh.shah" id="1" context="client1">
         <createTable tableName="USER">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true"/>
@@ -23,7 +23,6 @@
             <column name="USERNAME" value="bhavesh.shah"/>
         </insert>
     </changeSet>
-    <!-- database changed for application version 2
     <changeSet dbms="h2" id="3" author="bhavesh.shah">
         <addColumn tableName="USER">
             <column name="EMAIL" type="varchar(100)">
@@ -39,5 +38,4 @@
             </where>
         </update>
     </changeSet>
-    -->
 </databaseChangeLog>

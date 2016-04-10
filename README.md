@@ -18,3 +18,20 @@ Find more details [Here] (http://www.liquibase.org/)
 * Contexts - context are useful when you want to execute change sets per client or environment wise.
 
 Best Practices: http://www.liquibase.org/bestpractices.html
+
+
+**Websocket support**
+
+Events are pushed to REST endpoing which will publish to registered websocket clients.
+
+URL: http://localhost:8585/events (method = POST)
+
+* SockJS
+* Spring WebSockets
+
+Sample event feed (Use postman to post it through above mentioned URL): 
+ {
+     "logTimestamp": "2016-04-09T23:28:56.782Z",
+     "deviceId": "01:ff:02:rr:03:38",
+     "domain": "facebook.com"
+ }

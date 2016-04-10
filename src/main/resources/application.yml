@@ -20,6 +20,7 @@ endpoints:
   health:
     sensitive: false
 
+
 server:
   address: localhost
   port: 8585
