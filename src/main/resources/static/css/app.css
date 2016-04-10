@@ -1,4 +1,10 @@
 .logs {
-    background-color: black;
-    color: white;
+    color: black;
+    height:200px;
+}
+
+ul{
+    overflow:scroll;
+    height:300px;
+    background:lightblue;
 }

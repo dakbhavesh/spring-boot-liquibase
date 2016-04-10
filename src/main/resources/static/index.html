@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainApp">
 <head>
 	<title>Monitor Events</title>
 
@@ -24,11 +24,27 @@
 		</div>
 	</div>
 
+	<br><br>
+
+	<div class="col-md-12" ng-controller="LogController">
+		<span ng-show="isLoading">loading...</span>
+		<ul lr-infinite-scroll="loadOlder">
+			<li ng-repeat="message in messages">
+				{{message | json}}
+			</li>
+		</ul>
+	</div>
+
+
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/sockjs.min.js"></script>
 	<script type="text/javascript" src="scripts/stomp.min.js"></script>
+
+	<script data-require="angular.js@1.3.0" data-semver="1.3.0" src="//code.angularjs.org/1.3.0/angular.js"></script>
+	<script type="text/javascript" src="scripts/IrInfiniteScroll.js"></script>
 	<script type="text/javascript" src="scripts/bootstrap/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="scripts/app/app.js"></script>
+	<script type="text/javascript" src="scripts/app/app-ng.js"></script>
 </body>
 </html>

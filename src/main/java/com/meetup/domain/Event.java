@@ -1,24 +1,22 @@
 package com.meetup.domain;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.time.ZonedDateTime;
 
 /**
  * Created by bhavesh.shah on 4/9/2016.
  */
+
+@Document(indexName = "logs", type = "logs", shards = 1, replicas = 0, refreshInterval = "-1")
 public class Event {
 
     private String deviceId;
     private ZonedDateTime logTimestamp;
     private String domain;
-    private String message;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    @Id
+    private Long id;
 
     public String getDeviceId() {
         return deviceId;

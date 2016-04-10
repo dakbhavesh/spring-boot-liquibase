@@ -1,0 +1,38 @@
+{
+  "name": "spring-boot-liquibase",
+  "version": "0.0.0",
+  "appPath": "src/main/resources/static",
+  "testPath": "src/test/javascript/spec",
+  "dependencies": {
+    "modernizr": "2.8.3",
+    "json3": "3.3.2",
+    "angular-bootstrap": "0.14.3",
+    "angular-ui-router": "0.2.14",
+    "angular": "1.4.3",
+    "angular-resource": "1.4.3",
+    "angular-cookies": "1.4.3",
+    "angular-sanitize": "1.4.3",
+    "angular-cache-buster": "0.4.3",
+    "angular-i18n": "1.4.3",
+    "angular-translate": "2.7.0",
+    "angular-translate-interpolation-messageformat": "2.7.0",
+    "angular-translate-storage-cookie": "2.7.0",
+    "angular-translate-storage-local": "2.7.0",
+    "angular-translate-loader-static-files": "2.7.0",
+    "angular-dynamic-locale": "0.1.27",
+    "ngInfiniteScroll": "1.2.0",
+    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.6.0",
+    "angular-timeago": "0.2.4",
+    "angularjs-toaster": "~0.4.181",
+    "ng-tags-input": "~3.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.4.3",
+    "angular-scenario": "1.4.3"
+  },
+  "resolutions": {
+    "angular": "1.4.3",
+    "angular-cookies": "1.4.3",
+    "jquery": "2.1.3"
+  }
+}

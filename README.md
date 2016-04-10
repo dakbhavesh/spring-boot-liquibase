@@ -35,3 +35,10 @@ Sample event feed (Use postman to post it through above mentioned URL):
      "deviceId": "01:ff:02:rr:03:38",
      "domain": "facebook.com"
  }
+ 
+ http://mpas.github.io/blog/2015/06/16/adding-websocket/stomp-support-to-a-spring-boot-application/
+ 
+ **Logstash**
+ 
+ Command to
+ ./logstash -f /etc/logstash/conf.d/first-pipeline.conf

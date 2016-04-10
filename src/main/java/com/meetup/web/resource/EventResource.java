@@ -15,10 +15,11 @@ import java.util.List;
 /**
  * Created by bhavesh.shah on 4/9/2016.
  */
-@CrossOrigin(origins = "http://localhost:")
 @RestController
 @RequestMapping("/events")
 public class EventResource {
+
+    // TODO: Replace in-memory events with  spring ES template
     List<Event> events = new ArrayList<>();
 
     @Autowired
@@ -27,13 +28,12 @@ public class EventResource {
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Event> postEvent(@RequestBody Event event){
         events.add(event);
-        System.out.println("Event: " + event.toString());
         template.convertAndSend("/topic/message", event.toLogString());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Event>> monitor(){
-        return new ResponseEntity<List<Event>>(events, HttpStatus.OK);
+        return new ResponseEntity<>(events, HttpStatus.OK);
     }
 }
