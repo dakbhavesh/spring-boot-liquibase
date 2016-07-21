@@ -1,7 +1,6 @@
 package com.meetup.domain;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.time.ZonedDateTime;
 
@@ -9,7 +8,6 @@ import java.time.ZonedDateTime;
  * Created by bhavesh.shah on 4/9/2016.
  */
 
-@Document(indexName = "logstash-*", type="logs", shards = 1, replicas = 0, refreshInterval = "-1")
 public class Event {
 
     private String deviceId;
